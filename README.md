@@ -15,6 +15,17 @@ This repository provides tools for bulk downloading TROPOMI CH₄ satellite data
 - ✅ **Error Handling** - Retry logic and failed file logging
 - ✅ **File Validation** - Checks file sizes to detect download errors
 
+## Prerequisites
+
+### System Requirements
+- Linux/Unix environment
+- Python 3.7+
+- `wget` command-line tool
+
+### Python Dependencies
+```bash
+pip install pandas numpy requests
+```
 
 ### NASA Earthdata Account
 1. Register at [NASA Earthdata Login](https://urs.earthdata.nasa.gov/users/new)
@@ -22,6 +33,7 @@ This repository provides tools for bulk downloading TROPOMI CH₄ satellite data
    - Login to [Earthdata](https://urs.earthdata.nasa.gov/home)
    - Go to **Applications → Authorized Apps**
    - Approve **"NASA GESDISC DATA ARCHIVE"** and **"GES DISC"**
+   - Wait 5-10 minutes for approval to propagate
 
 ## Getting Started
 
@@ -215,6 +227,20 @@ df -h /your/download/path
 2. Escape special characters: `\$`, `\!`
 3. Consider changing password to alphanumeric
 
+## Performance Tips
+
+1. **Network Speed:** 
+   - Typical rate: 2-3 files/second
+   - Depends on network bandwidth and NASA server load
+
+2. **Parallel Downloads:**
+   - Not recommended (may trigger rate limiting)
+   - NASA prefers sequential downloads
+
+3. **Resume Interrupted Downloads:**
+   - Simply re-run the script
+   - Existing files are automatically skipped
+
 ## Data Format
 
 Downloaded files are NetCDF format (`.nc`) with naming convention:
@@ -240,5 +266,47 @@ tropomi-data-download/
 ├── download_full_wget.py        # Main download script
 └── check_netrc.py               # Authentication checker
 ```
+
+## Citation
+
+If you use TROPOMI data in your research, please cite:
+
+```bibtex
+@article{hu2018toward,
+  title={Toward Global Mapping of Methane With TROPOMI: First Results and Intersatellite Comparison to GOSAT},
+  author={Hu, H. and Landgraf, J. and Detmers, R. and Borsdorff, T. and Aan de Brugh, J. and Aben, I. and Butz, A. and Hasekamp, O.},
+  journal={Geophysical Research Letters},
+  volume={45},
+  number={8},
+  pages={3682--3689},
+  year={2018},
+  doi={10.1002/2018GL077259}
+}
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit issues or pull requests.
+
+## License
+
+MIT License - See LICENSE file for details
+
+## Acknowledgments
+
+- NASA GES DISC for providing TROPOMI data
+- ESA Copernicus Sentinel-5P mission
+- SRON Netherlands Institute for Space Research
+
+## Contact
+
+**Developed for atmospheric methane monitoring research**
+
+- Institution: UNIST IRIS Lab
+- Research Focus: Satellite remote sensing of atmospheric methane
+
+For questions or issues, please open an issue on GitHub.
+
+---
 
 **Last Updated:** January 2026
