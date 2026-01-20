@@ -241,23 +241,4 @@ tropomi-data-download/
 └── check_netrc.py               # Authentication checker
 ```
 
-## Citation
-
-If you use TROPOMI data in your research, please cite:
-
-```bibtex
-@article{hu2018toward,
-  title={Toward Global Mapping of Methane With TROPOMI: First Results and Intersatellite Comparison to GOSAT},
-  author={Hu, H. and Landgraf, J. and Detmers, R. and Borsdorff, T. and Aan de Brugh, J. and Aben, I. and Butz, A. and Hasekamp, O.},
-  journal={Geophysical Research Letters},
-  volume={45},
-  number={8},
-  pages={3682--3689},
-  year={2018},
-  doi={10.1002/2018GL077259}
-}
-```
-
----
-
 **Last Updated:** January 2026
