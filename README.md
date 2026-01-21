@@ -13,12 +13,17 @@ Automated Python tool for downloading TROPOMI (TROPOspheric Monitoring Instrumen
 
 ## Performance
 
-**Real-world results** (10,338 files):
+**For 2 years ** (10,338 files):
 - **Download time**: ~14 hours
 - **Success rate**: 99.7%
 - **Average speed**: 12.5 files/min
 - **Total data**: ~1.2 TB
 
+### System specifications:
+
+256 CPU cores
+504 GB RAM
+10 parallel download threads
 ## Requirements
 
 ### System
