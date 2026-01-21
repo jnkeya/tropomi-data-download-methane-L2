@@ -21,9 +21,10 @@ Automated Python tool for downloading TROPOMI (TROPOspheric Monitoring Instrumen
 
 ### System specifications:
 
-256 CPU cores
-504 GB RAM
-10 parallel download threads
+- 256 CPU cores
+- 504 GB RAM
+- 10 parallel download threads
+- 
 ## Requirements
 
 ### System
